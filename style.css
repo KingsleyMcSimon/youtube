@@ -1,0 +1,449 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-size: 14px; /*not part of Meyer's reset*/
+    font-family: 'Roboto', 'Arial', sans-serif;  /*not part of Meyer's reset*/
+    color: #212121;  /*not part of Meyer's reset*/
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*********************added css reset***************************/
+a, a:hover, a:visited, a:active, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*********************end of css reset************************/
+
+/*****************************************
+*******************GENERAL*****************
+*****************************************/
+
+i span {
+    display: none;
+}
+
+.grey-text {
+    color: #848484;
+}
+
+.bold-text {
+    font-weight: 500;
+}
+
+.grey-bott-border {
+    border-bottom: 0.5px solid #eeeeef;
+}
+
+.subtitles {
+    font-size: 0.9em;
+  line-height: 1.4em;
+  margin-bottom: 2px;
+    color: #848484;
+}
+
+.interact-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+}
+
+.interact-options p {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.interact-options i:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+/*****************************************
+*******************Navbar*****************
+*****************************************/
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #848484;
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+    top: 0;
+}
+
+header i:hover,
+header img:hover {
+    cursor: pointer;
+    color: #000;
+    opacity: 1;
+}
+
+/*****left******/
+.left-nav {
+    width: 150px;
+    margin-left: 25px;
+}
+
+/*****center******/
+.search-bar {
+    flex-grow: 2;
+    display: flex;
+}
+
+.search-box{
+    width: 85%;
+    height: 27px;
+    padding: 2px 6px;
+    border-radius: 2px 0 0 2px;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+}
+
+.search-bar input {
+    margin-right: 4px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.2em;
+    font-family: Roboto;
+}
+
+.search-btn {
+    border-top: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    width: 60px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-btn i {
+    width: auto;
+    padding: 8px 0;
+}
+
+/*****right******/
+
+.right-nav  {
+    width: 300px;
+    margin-right: 40px;
+    text-align: right;
+}
+
+.right-nav * {
+    margin-left: 25px;
+}
+
+.right-nav a {
+    margin-left: 35px;
+    color: #2793e6;
+    cursor: pointer;
+}
+
+.right-nav a:hover {
+    opacity: 0.6;
+}
+
+.right-nav img {
+    transform: translateY(3px);
+    opacity: 0.4;
+}
+
+/*****************************************
+*******************Main*****************
+*****************************************/
+
+section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: auto;
+    margin-top: 90px;
+}
+
+/*******************Video*****************/
+
+.curr-video {
+    width: 90%;
+    line-height: 2.4em;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 30px;
+    height: 0;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*video data*/
+h1 {
+    font-size: 1.4em;
+    padding-top: 10px;
+}
+
+.vid-data {
+    display: flex;
+    justify-content: space-between;
+  padding-bottom: 2px;
+}
+
+.nb-views {
+    font-size: 1.2em;
+    width: 50%;
+}
+
+.options {
+    width: auto;
+    color: #a4a4a4;
+    position: relative;
+}
+
+.interact-options i:last-child {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blue-bar {
+    background-color: #2793e6;
+    height: 2px;
+    width: 98px;
+}
+
+.transparent-bar {
+    background-color: #d0d0d0;
+    height: 2px;
+    width: 103px;
+    position: absolute;
+}
+
+/*video details*/
+.vid-details {
+    line-height: 1.5em;
+}
+
+.vid-text {
+    margin-left: 64px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.profile-pic {
+    margin-top: 18px;
+    margin-right: 10px;
+    background-color: #689f39;
+    float: left;
+    width: 48px;
+    height: 48px;
+    border border-radius:;
+    border-radius:  50%;
+    color: #fff;
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    font-size: 1.4em;
+}
+
+
+/*******************Aside*****************/
+aside {
+    width: 90%;
+    height: auto;
+}
+
+.categ-title {
+    font-size: 1.3em;
+    padding: 25px 0 20px 0;
+}
+
+.autoplay-btn {
+    float: right;
+  padding-top: 25px;
+}
+
+.autoplay-btn i {
+    color: #e6e6e6;
+    padding-left: 10px;
+}
+
+.vid-duration {
+    float: right;
+  color: #fff;
+  background: #000;
+  opacity: 0.7;
+  padding: 2px 5px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  transform: translatey(-20px);
+  margin-right: 5px;
+}
+
+.sugg-vid-wrapper {
+    display: flex;
+}
+
+.sugg-vid {
+    width: 168px;
+}
+
+.sugg-vid-desc {
+    margin-left: 10px;
+}
+
+.sugg-vid-title {
+    margin-bottom: 5px;
+    line-height: 1.1em;
+    font-size: 1.1em;
+}
+
+
+/*******************Comments*****************/
+
+.comments {
+    width: 90%;
+    height: auto;
+}
+
+.comments-top * {
+    display: inline-block;
+}
+
+.comments-top p:last-of-type {
+    padding-left: 25px;
+    padding-right: 10px;
+  letter-spacing: 0.3px;
+}
+
+.comments-top i {
+    padding-right: 10px;
+}
+
+/*Comm details*/
+
+#current-user {
+    background-color: #4373e0;
+    color: #a0c3fe;
+    width: 35px;
+    height: 35px;
+}
+
+.comm-section {
+    margin-left: 58px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.comm-details .profile-pic {
+    width: 40px;
+    height: 40px;
+}
+
+.comm-add {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.comm-text {
+    padding-top: 5px;
+    line-height: 1.3em;
+}
+
+.comm-interactions {
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.comment-date {
+    font-size: 0.8em;
+    display: inline-block;
+    padding-left: 7px;
+}
+
+
+/*************************************************************
+********************Bigger screens****************************
+*************************************************************/
+
+@media only screen and (min-width: 1000px) {
+    section {
+        display: block;
+    }
+
+    aside {
+        position: absolute;
+        width: 35%;
+        top: 0;
+        right: 25px;;
+    margin-top: 60px;
+    }
+
+    .up-next,
+    .suggestions,
+    .show-sugg-vid {
+        margin: 0 25px;
+    }
+
+    .curr-video,
+    .comments {
+        width: 50%;
+        padding-left: 95px;
+    }
+}
